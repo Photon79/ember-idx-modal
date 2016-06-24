@@ -3,6 +3,7 @@ import Em from 'ember';
 import Modal from './modal';
 import WithConfigMixin from 'ember-idx-utils/mixin/with-config';
 import StyleBindingsMixin from 'ember-idx-utils/mixin/style-bindings';
+import getOwner from 'ember-getowner-polyfill';
 
 /**
  * `{{em-modal-toggler}}` component.
@@ -58,8 +59,8 @@ export default Em.Component.extend(WithConfigMixin, StyleBindingsMixin, {
       return this.set('modal', modalAsAncestor);
     } else {
       return Em.run.schedule('afterRender', this, function() {
-        return this.set('modal', Em.View.views[this.get('modal-id')]);
+        return this.set('modal', getOwner(this).lookup('-view-registry:main')[this.get('modal-id')]);
       });
     }
-  }).on('willInsertElement')
+  }).on('didInsertElement')
 });
