@@ -28,6 +28,8 @@
     "ember-data": "1.0.0-beta.12",
     "ember-export-application-global": "^1.0.0",
     "ember-getowner-polyfill": "1.0.1",
+    "ember-idx-button": "github:Photon79/ember-idx-button.git#Photon-patch-1",
+    "ember-idx-forms": "github:Photon79/ember-forms.git#Photon-patch-1",
     "ember-validations": "^2.0.0-alpha.1",
     "express": "^4.8.5",
     "glob": "^4.0.5",
@@ -46,8 +48,6 @@
     "configPath": "tests/dummy/config"
   },
   "dependencies": {
-    "ember-idx-utils": "0.2.2",
-    "ember-idx-button": "^0.1.3",
-    "ember-idx-forms": "^0.5.0-SNAPSHOT"
+    "ember-idx-utils": "^0.2.2"
   }
 }
